@@ -83,16 +83,29 @@ for category_item in category_item_dict:
             # else:
             #     print "广告视频封面图片链接:", "http://k.cnad.com" + production_box[0][0][0].get('src')
             # print "广告视频资源链接：", "http://k.cnad.com" + production_box[0][0].get('href')
-            # print "**************************分割线***************************************"
-            production_box_item = {
-                                    "视频名称" : production_box[1][0].text.lstrip(),
-                                    "品牌名称" : production_box[2][0].text,
-                                    "语种" : production_box[3][0].text,
-                                    "国家或地区" : production_box[3][1].text,
-                                    "广告年份" : production_box[4][0].text,
-                                    "广告类型" : production_box[4][1].text,
-                                    "广告视频封面图片链接" : "??",
-                                    "广告视频资源链接" : production_box[0][0].get('href')
+            # print "**************************分割线***************************************"\
+            video_cover_image_link = production_box[0][0][0].get('src')
+            if video_cover_image_link[0:4] == "http":
+                production_box_item = {
+                                        "视频名称" : production_box[1][0].text.lstrip(),
+                                        "品牌名称" : production_box[2][0].text,
+                                        "语种" : production_box[3][0].text,
+                                        "国家或地区" : production_box[3][1].text,
+                                        "广告年份" : production_box[4][0].text,
+                                        "广告类型" : production_box[4][1].text,
+                                        "广告视频封面图片链接" : production_box[0][0][0].get('src'),
+                                        "广告视频资源链接" : production_box[0][0].get('href')
+                                        }
+            else:
+                production_box_item = {
+                                        "视频名称" : production_box[1][0].text.lstrip(),
+                                        "品牌名称" : production_box[2][0].text,
+                                        "语种" : production_box[3][0].text,
+                                        "国家或地区" : production_box[3][1].text,
+                                        "广告年份" : production_box[4][0].text,
+                                        "广告类型" : production_box[4][1].text,
+                                        "广告视频封面图片链接" : "http://k.cnad.com" + production_box[0][0][0].get('src'),
+                                        "广告视频资源链接" : production_box[0][0].get('href')
                                     }
             # print production_box_item
             # print json.dumps(production_box_item , ensure_ascii=False , indent=2)
@@ -107,7 +120,8 @@ for category_item in category_item_dict:
 
 # print production_box_item_list_total
 d = json.dumps(production_box_item_list_total , ensure_ascii=False , indent=2)
-with open("C:\\Users\\oliverfan\\Desktop\\111.txt", "w") as f:
+# d = d.decode('unicode-escape')
+with open("C:\\Users\\oliverfan\\Desktop\\adVideoInfo.txt", "w") as f:
     json.dump(d, f)
 
 end_time = time.clock()
