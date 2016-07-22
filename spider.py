@@ -61,7 +61,12 @@ for category_item in category_item_dict:
             response = urllib2.urlopen(request)
         except:
             print "网络异常，正在重新尝试连接..."
-            response = urllib2.urlopen(request)
+            try:
+                response = urllib2.urlopen(request)
+            except:
+                print "网络异常，正在重新尝试连接..."
+                response = urllib2.urlopen(request)
+
         html = response.read()
         tree = etree.HTML(html, parser=etree.HTMLParser(encoding='utf-8'))
         # 注释掉的这两行xpath解析的是k.cnad.com这个路径下的页面，它存在分类栏这个结构
@@ -116,11 +121,15 @@ for category_item in category_item_dict:
                                         "所属分类" :category_item.get('title') ,
                                         "视频资源集合" : production_box_item_list
                                         }
-    production_box_item_list_total.append(production_box_item_list_object)
 
-# print production_box_item_list_total
+    production_box_item_list_total.append(production_box_item_list_object)
+    d = json.dumps(production_box_item_list_total , ensure_ascii=False , indent=2)
+    d = d.decode('unicode-escape')
+    with open("C:\\Users\\oliverfan\\Desktop\\adVideoInfo.txt", "w") as f:
+        json.dump(d, f)
+
 d = json.dumps(production_box_item_list_total , ensure_ascii=False , indent=2)
-# d = d.decode('unicode-escape')
+d = d.decode('unicode-escape')
 with open("C:\\Users\\oliverfan\\Desktop\\adVideoInfo.txt", "w") as f:
     json.dump(d, f)
 
