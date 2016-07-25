@@ -1,4 +1,4 @@
-#coding=utf-8
+# -*- coding:utf-8 -*-
 import urllib2
 from lxml import etree
 import time
@@ -36,6 +36,8 @@ for category_item in category_list:
     category_item_dictitem = { "title" : category_item.get('title'), "href" : url + category_item.get('href')}
     category_item_dict.append(category_item_dictitem)
 print category_item_dict
+d = json.dumps(category_item_dict , ensure_ascii=False , indent=2)
+print d
 
 production_box_item_list_total = []
 for category_item in category_item_dict:
@@ -123,15 +125,11 @@ for category_item in category_item_dict:
                                         }
 
     production_box_item_list_total.append(production_box_item_list_object)
-    d = json.dumps(production_box_item_list_total , ensure_ascii=False , indent=2)
-    d = d.decode('unicode-escape')
-    with open("C:\\Users\\oliverfan\\Desktop\\adVideoInfo.txt", "w") as f:
-        json.dump(d, f)
 
 d = json.dumps(production_box_item_list_total , ensure_ascii=False , indent=2)
-d = d.decode('unicode-escape')
-with open("C:\\Users\\oliverfan\\Desktop\\adVideoInfo.txt", "w") as f:
-    json.dump(d, f)
+f = open('/Users/fanyingnan/Desktop/adVideoInfo.txt', 'w')
+f.write(d)
+f.close()
 
 end_time = time.clock()
 time_duration = end_time - start_time
