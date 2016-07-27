@@ -24,12 +24,9 @@
 
     <script src="js/kol_default_response.js"></script>
     <script src="js/kol_external_2.js"></script>
-    <script>$(document).ready(function() {
-        new KOLResponse();
-        new KOLValidation();
-      });</script>
+
     <style>/* * Author: Carlos Alvarez * URL: http://alvarez.is * * Project Name: Landing Sumo - Theme 20 * URL: http://LandingSumo.com * Version: 1.0 */ /* ################################################################ 1. GENERAL STRUCTURES ################################################################# */ * { margin: 0; padding: 0px; font-family: 'HelveticaNeue-Light' , Helvetica, Arial, sans-serif; font-weight: normal; } body { background: #ffffff; margin: 0; color: #5a5a5a; font-family: 'HelveticaNeue-Light' , Helvetica, Arial, sans-serif; font-weight: normal; } img { max-width: 100% !important; } h1, h2, h3, h4, h5, h6 { font-family: 'Lato' , Helvetica, Arial, sans-serif; font-weight: 300; } p { padding: 0; margin-bottom: 12px; font-size: 16px; line-height: 26px; letter-spacing: 1px; margin-top: 10px; } html, body { height: 100%; } .alignleft { float: left; } .alignright { float: right; } .aligncenter { margin-left: auto; margin-right: auto; display: block; clear: both; } .centered {text-align: center} .mt { margin-top: 25px; line-height: 1.9; } .mb {margin-bottom: 50px;} .mtb {margin-top: 50px; margin-bottom: 50px;} .mtb2 { margin-top: 100px; margin-bottom: 100px;} .ptb {padding-top: 80px; padding-bottom: 80px;} .clear { clear: both; display: block; font-size: 0; height: 0; line-height: 0; width:100%; } ::-moz-selection { color: #fff; text-shadow:none; background:#2B2E31; } ::selection { color: #fff; text-shadow:none; background:#2B2E31; } *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; margin: 0; } a { color: #00b5fc; text-decoration: none; } a:hover, a:active, a:visited { color: #00b5fc; text-decoration: underline; } .nopadding { padding: 0px !important; margin: 0px; } /* FORM CONFIGURATION */ #subscribe-form { margin: 30px auto !important; text-align: center; } #subscribe-form .subscribe-input { min-width: 300px; border-radius: 6px; margin-bottom: 10px; max-width: 400px; text-align: center; margin-left: auto; margin-right: auto; } #subscribe-form .checkbox { margin-left: auto; margin-right: auto; text-align: left; max-width: 400px; } .btn-primary { border-radius: 6px; padding-left: 30px; padding-right: 30px; max-width: 400px; } #subscribe-form .form-control { display: block; float: none; width: 100%; } #subscribe-form .input-block { display: block; float: none; } .radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] { margin-left: -20px; margin-top: 7px; } .checkbox { text-align: left; padding-left: 20px; font-size: 18px; } @media screen and (max-width: 767px) { #subscribe-form .btn-primary { width: 100%; } #subscribe-form input { display: block; float: none; width: 100%; } #subscribe-form .input-inline { display: block; float: none; text-align: center; } } .social_share_link:hover { text-decoration: none !important; } .subscribe-submit { right: 0; } .btn-download { background: #FDE3A7; } .btn-primary { background: #fb003b; color: #ffffff; border: 0; transition: all .5s ease; -moz-transition: all .5 ease; -webkit-transition: all .5s ease; } .btn-primary:hover, .btn-primary:active, .btn-primary:visited { background: #c80008; color: inherit; border: 0; } /* HEADER SECTION */ #h { background: url('img/new_filter_phone_bg.png') no-repeat; padding-top: 20px; text-align:center; background-attachment: relative; background-size: cover; background-position: center center; width: 100%; color: #ffffff; position: relative; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; } .hero-content { margin: 100px auto; } .background-color { background: #000000; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: .6; } #h h1 { font-weight: 700; color: #ffffff; font-size: 40px; } /* SEP */ #sep { background: url('img/sep.png') no-repeat center top; padding: 80px 0; text-align:center; background-attachment: relative; background-position: center center; width: 100%; color: white; -webkit-background-size: 100%; -moz-background-size: 100%; -o-background-size: 100%; background-size: 100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; } #sep h4 { letter-spacing: 1px; line-height: 30px; margin-top: 0; } /* SPONSORS */ #g { background: #ffffff; color: #5a5a5a; padding-top: 80px; padding-bottom: 80px; } .sponsor img { max-width: 140px; max-height: 60px; vertical-align: middle; display: inline; margin: 0 20px; } .sponsor .col-sm-2 { height: 80px; line-height: 80px; } /* GREEN SECTION - TESTIMONIAL */ #green { padding-top: 80px; padding-bottom: 80px; background: #03c9a9; color: #ffffff; } #green h3 { line-height: 1.4; margin-bottom: 1em; } #green h5 { letter-spacing: 1px; } #green tgr { font-weight: 700; letter-spacing: 1px; } /* FOOTER */ #f { padding-top: 80px; padding-bottom: 80px; background: #2f2f2f; color: #ffffff; } #f h5 { margin-top: 30px; letter-spacing: 1px; } #f i { font-size: 18px; margin: 5px; } #f a { color: #00b5fc !important; text-decoration: none; } #f a:hover, #f a:active, #f a:visited { color: #00b5fc; text-decoration: underline; } .social-bottom a { color: #00b5fc; transition: color .5s ease; -moz-transition: color .5s ease; -webkit-transition: color .5s ease; } .social-bottom a:hover, .social-bottom a:visited, .social-bottom a:active { color: #33e8ff; text-decoration: none; } .copyright { margin-top: 50px; } @media screen and (max-width: 991px) { .text-left { text-align: center; } } @media screen and (max-width: 767px) { .sponsor img { display: block; margin: 20px auto; text-align: center; } } @media only screen and (min-width: 768px) { .header img { width: 200px; } } @media (max-width: 767px) { .header img { width: 150px; } } @media (max-width: 599px) { #h { background: url('//d1y0v6ricksqp.cloudfront.net/images/backgrounds/pictures/new_filter_phone_bg.jpg') no-repeat; background-size: cover; background-position: center center; } }</style>
-      <link href="css/tvc/search.css" rel="stylesheet" type="text/css" />
+    <link href="css/adBlock.css" rel="stylesheet" type="text/css" />
     <script src="//load.sumome.com/" data-sumo-site-id="cff77d6b7b0f943b9ffacb27a7e2f283d38dd21f6adee7841149a377252b5a4e" async="async"></script>
   </head>
   
@@ -100,6 +97,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-5 text-center">
           <div data-content-name="feature_content" data-mercury="froala">
+            <br><br><br><br>
             <h1><strong>海量数据</strong></h1>
             <br>
             <p class="mt">广告资源系统通过python爬虫，从互联网上爬取了海量的广告视频资源，涵盖了个大类，总计近3万条视频资源，保证了系统资源的充足和全面。&nbsp;</p></div>
@@ -136,119 +134,194 @@
         <div class="col-md-2"></div>
         <div class="col-md-5 text-center">
           <div data-content-name="feature_content" data-mercury="froala">
-            <h1><strong>海量数据</strong></h1>
+            <br><br><br><br>
+            <h1><strong>强大管理功能</strong></h1>
             <br>
-            <p class="mt">广告资源系统通过python爬虫，从互联网上爬取了海量的广告视频资源，涵盖了个大类，总计近3万条视频资源，保证了系统资源的充足和全面。&nbsp;</p></div>
+            <p class="mt">开发团队从用户的角度出发，充分挖掘了广告视频使用者对于这一系统的潜在需求，提供了完善的管理功能。&nbsp;</p>
+          </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-4">
-          <img src="img/spider2.jpg" class="img-responsive" alt="" data-content-name="feature_image" data-mercury="kickimage"></div>
+          <img src="img/app.jpg" ></div>
       </div>
     </div>
+
+    <div id="sep">
+      <div class="container">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 text-center" >
+              <br><br><br><br><br><br><br><br><br><br><br>
+              <div>
+                <h1><strong>热门视频</strong></h1>
+                <br>
+                <p class="mt">来自于用户实时的最新热门广告视频。&nbsp;</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <ul class="popular-stores clearfix">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+
+              <ul class="popular-stores clearfix">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="coupon coupon-column">
+                    <div class="coupon-inner">
+                      <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes" class="related-logo store-logo">
+                        <img src="https://s3-us-west-2.amazonaws.com/pcw-uploads/logos/the-childrens-place-promo-codes-coupons.jpeg" alt="The Children's Place coupon codes"></a>
+                      <div class="card-meta">
+                        <h6 class="store-name">
+                          <a href="/the-childrens-place-promo-code">The Children's Place</a></h6>
+                        <h3 class="description one-line">
+                          <a href="/the-childrens-place-promo-code" title="The Children's Place coupon codes">60% Off</a></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="col-md-2">
+            <p class="text-center">
+              <a href="store">查看更多>>
+              </a>
+            </p>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
 
     <div id="f">
       <div class="container">
         <div class="row-fluid text-center">
           <div class="footer-content">
+           
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-7">
+
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li>
+                    <a href="/about#contact">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="/blog">Blog</a>
+                  </li>
+                  <li>
+                    <a href="/scholarship">Scholarship</a>
+                  </li>
+                  <li>
+                    <a href="/terms">Terms &amp; Conditions</a>
+                  </li>
+                  <li>
+                    <a href="/privacy">Privacy&nbsp;Policy</a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-md-2"></div>
+              
+            </div>
+
+          </div>
+         
+          <div class="footer-content">
             <div data-mercury="froala" data-content-name="footer_content">
-              <h2>Contact Us Anytime</h2>
-              <p>follow us so we can stay in touch!</p>
-            </div>
+              <h7>Copyright 2016 - 西安交通大学SICD实验室</h7>
           </div>
-          <div class="social social-bottom">
-            <a class="twitter" href="https://www.instagram.com/beaustantly" target="_blank">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a class="email" href="mailto:hello@beaustantly.com">
-              <i class="fa fa-envelope"></i>
-            </a>
-          </div>
-          <!--// .social -->
-          <div class="copyright text-center">
-            <div data-mercury="froala" data-content-name="copyright_text">
-              <p>Copyright 2016 - Beaustantly</p>
-            </div>
-            <a href="/privacy">Privacy Policy</a></div>
+          
+
         </div>
         <!--/row--></div>
       <!--/container--></div>
     <!--/F-->
     <script src="js/jquery.fitvids.js"></script>
     <script>if (typeof kolInsertFroalaImage === 'undefined') $(".row, .row-fluid, .container").fitVids();</script>
-    <script>$(document).ready(function() {
-        var secondaryButton = $('#sep button.btn-primary'),
-        formInput = $('#subscribe-form input').first();
-
-        secondaryButton.on('click',
-        function(e) {
-          e.preventDefault();
-          $('html body').animate({
-            scrollTop: formInput.offset().top - 20 + 'px'
-          },
-          1000);
-          formInput.focus();
-        });
-      });</script>
-    <script>$(document).ready(function() {
-        analytic_options = {
-          stats_url: "//api.kickofflabs.com",
-          list_id: 69939,
-          source: "page.97098",
-          debug: false,
-          custom: {
-            page_theme: 'cleanhero'
-          },
-          click_selector: "a.social_share_link"
-        };
-
-        window.__kol_analytics = new KOLAnalytics(analytic_options) window.__kol_analytics.track_view()
-
-      });</script>
-    <script>function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regexS = "[\\?&]" + name + "=([^&#]*)";
-        var regex = new RegExp(regexS);
-        var results = regex.exec(window.location.search);
-        if (results == null) return "";
-        else return decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-
-      $(document).ready(function() {
-        var email = getParameterByName('_email');
-        if (email != "") {
-          $('#email').val(email);
-          if ($('.required').length < 2) {
-            $('#signup_form').submit();
-          }
-        }
-      });</script>
     <script>window.jQuery || document.write('<scr' + 'ipt src="js/jquery-1.11.0.min.js"><\/sc' + 'ript>')</script>
     <script>window.$kol_jquery = window.jQuery</script>
     <script src="js/kol_bounce.js"></script>
     <script src='js/91312.js'></script>
-    <script>$(function() {
-        var share_options = {
-          "networks": [{
-            "network": "facebook",
-            "icon": "facebook"
-          },
-          {
-            "network": "twitter",
-            "icon": "twitter"
-          },
-          {
-            "network": "email",
-            "icon": "envelope"
-          }],
-          "share_text": "Check this out! Beaustantly: Beauty. Instantly.",
-          "body": "This is great!\r\n\r\nNow we can get haircuts, hairstyling, and makeup in the comfort of our home, hotel room, or office!\r\n\r\nPlease sign up with the following link: \r\n\r\n",
-          "subject": "Check this out! Beaustantly: Beauty. Instantly.",
-          "page_title": "Beaustantly | Beauty, instantly!",
-          "page_description": "Haircuts, hairstyling, and makeup services done in the comfort of your home, hotel room, or office by a certified and vetted Beaustantly Beautician. "
-        };
-        var share_links = new KOLShareLinks(share_options);
-        window.__kol_share_links = share_links;
-      });</script>
   </body>
 
 </html>
