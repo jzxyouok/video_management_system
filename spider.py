@@ -56,6 +56,7 @@ for category_item in category_item_dict:
 
     # 爬取视频广告的具体信息
     for page_index in range(int(page_count)):
+        print "当前第" + str(page_index) + "页"
         url = category_item['href'] + "&page=" + str(page_index + 1)
         request = urllib2.Request(url)
         # response = multiConnect(request)
@@ -101,8 +102,9 @@ for category_item in category_item_dict:
                                         "广告年份" : production_box[4][0].text,
                                         "广告类型" : production_box[4][1].text,
                                         "广告视频封面图片链接" : production_box[0][0][0].get('src'),
-                                        "广告视频资源链接" : production_box[0][0].get('href')
+                                        # "广告视频资源链接" : production_box[0][0].get('href')
                                         }
+                url = production_box[0][0].get('href')
             else:
                 production_box_item = {
                                         "视频名称" : production_box[1][0].text.lstrip(),
@@ -112,10 +114,33 @@ for category_item in category_item_dict:
                                         "广告年份" : production_box[4][0].text,
                                         "广告类型" : production_box[4][1].text,
                                         "广告视频封面图片链接" : "http://k.cnad.com" + production_box[0][0][0].get('src'),
-                                        "广告视频资源链接" : production_box[0][0].get('href')
+                                        # "广告视频资源链接" : production_box[0][0].get('href')
                                     }
-            # print production_box_item
-            # print json.dumps(production_box_item , ensure_ascii=False , indent=2)
+
+            # http请求视频详情页面，获取视频资源链接
+            url = "http://k.cnad.com" + production_box[0][0].get('href')
+            request = urllib2.Request(url)
+            try:
+                response = urllib2.urlopen(request)
+            except:
+                print "网络异常，正在重新尝试连接..."
+                try:
+                    response = urllib2.urlopen(request)
+                except:
+                    print "网络异常，正在重新尝试连接..."
+                    response = urllib2.urlopen(request)
+
+            html = response.read()
+            tree = etree.HTML(html, parser=etree.HTMLParser(encoding='utf-8'))
+            video_player_temp = tree.xpath(u'//div[@class="show_list"]/ul/li[@class="content"]/span/embed')
+            if len(video_player_temp) == 0:
+                x = {"广告视频资源链接": ""}
+                production_box_item.update(x)
+            else:
+                video_player_url = video_player_temp[0].get('src')
+                x = {"广告视频资源链接" : video_player_url}
+                production_box_item.update(x)
+
             production_box_item_list.append(production_box_item)
             production_index += 1
 
